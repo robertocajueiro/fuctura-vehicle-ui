@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'fuctura-veicular-ui';
+
+  public appName = "Fuctura Veícular UI";
+
 }
