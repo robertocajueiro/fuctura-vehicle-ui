@@ -9,6 +9,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { VehicleListComponent } from './vehicle/components/vehicle-list/vehicle-list.component';
+import { AccessControlGuard } from './shared/guards/access-control.guard';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { VehicleListComponent } from './vehicle/components/vehicle-list/vehicle-
     MatButtonModule,
     MatToolbarModule
   ],
-  providers: [],
+  providers: [AccessControlGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
