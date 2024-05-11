@@ -18,10 +18,10 @@ ng new fuctura-veicular-ui
 ## Estrutura do projeto
 
 APP >
-        MODULE >
+        MODULE >\
                 COMPONENTS
-        SHARED >
-                COMPONENTS
-                SERVICES
-                GUARDS
-                DIRECTIVES
+        SHARED >\
+                COMPONENTS\
+                SERVICES\
+                GUARDS\
+                DIRECTIVES\
