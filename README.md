@@ -17,7 +17,7 @@ ng new fuctura-veicular-ui
 ```
 ## Estrutura do projeto
 
-APP >
+APP >\
         MODULE >\
                 COMPONENTS
         SHARED >\
