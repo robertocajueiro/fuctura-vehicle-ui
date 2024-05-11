@@ -17,7 +17,8 @@ ng new fuctura-veicular-ui
 ```
 ## Estrutura do projeto
 
-/*APP >\
+```bash
+APP >\
         MODULE >\
                 COMPONENTS
         SHARED >\
@@ -25,4 +26,4 @@ ng new fuctura-veicular-ui
                 SERVICES\
                 GUARDS\
                 DIRECTIVES
-*/
+```
