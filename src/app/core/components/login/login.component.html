@@ -1,26 +1,27 @@
 <div class="example-container">
-  <mat-form-field>
-    <mat-label>Enter your email</mat-label>
-    <input matInput placeholder="pat@example.com" [formControl]="email" required>
-    <mat-error *ngIf="email.invalid">{{getEmailErrorMessage()}}</mat-error>
-  </mat-form-field>
-  <br /> <br />
+  <form [formGroup]="loginForm">
+    <div class="example-container">
+      <mat-form-field>
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="email" required>
+        <mat-error *ngIf="loginForm.controls['email'].invalid">{{getEmailErrorMessage()}}</mat-error>
+      </mat-form-field>
+      <br /><br />
 
-  <mat-form-field>
-    <mat-label>Enter your password</mat-label>
-    <input matInput
-     type="password"
-     placeholder="*****"
-     [formControl]="password"
-     required>
-    <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
-  </mat-form-field>
+      <mat-form-field>
+        <mat-label>Enter your password</mat-label>
+        <input matInput type="password" formControlName="password" required>
+        <mat-error *ngIf="loginForm.controls['password'].invalid">{{getPasswordErrorMessage()}}</mat-error>
+      </mat-form-field>
 
-  <br />
-  <button type="button" [disabled]="isFormDisabled()">Entrar</button>
+      <br /><br /><br />
+      <button type="submit" [disabled]="isFormDisabled()">entrar</button>
 
-  <br /> <br />
+      <br /><br />
 
- {{ email.errors | json }}
- {{ password.errors | json }}
-</div>
+      {{ loginForm.errors | json }}
+
+      {{ loginForm.controls['email'].errors | json }}
+      {{ loginForm.controls['password'].errors | json }}
+    </div>
+  </form>

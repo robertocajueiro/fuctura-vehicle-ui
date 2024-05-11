@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -8,39 +8,42 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class LoginComponent {
 
-  public email: FormControl = new FormControl('',
-  [ Validators.email,
+  private emailFormControl: FormControl = new FormControl('', [
+    Validators.email,
     Validators.required
   ]);
 
-  public password: FormControl = new FormControl('', Validators.minLength(6));
 
-  getEmailErrorMessage(): string {
-    if(this.email.hasError('required')) {
-      return "E-mail obrigatório!"
+  public loginForm: FormGroup = new FormGroup({
+    email: this.emailFormControl,
+    password: new FormControl('', Validators.minLength(6)),
+  });
+
+  public getEmailErrorMessage(): string {
+
+    if (this.loginForm.controls['email'].hasError('required')) {
+      return "E-mail é obrigatorio"
     }
 
-    if(this.email.hasError('email')) {
-      return "Precisa ser do tipo E-mail no formato pat@localhost.com"
+    if (this.loginForm.controls['email'].hasError('email')) {
+      return "Precisa ser do tipo E-mail no formato xpto@provider.com"
     }
 
     return ""
   }
-  getPasswordErrorMessage(): string {
-
-    if(this.password.hasError('required')) {
-      return "Senha obrigatório!"
+  public getPasswordErrorMessage(): string {
+    if (this.loginForm.controls['password'].hasError('required')) {
+      return "Senha é obrigatoria"
     }
 
-    if(this.password.hasError('minlength')) {
-      return "Tamanho mínimo de 6 caracteres"
+    if (this.loginForm.controls['password'].hasError('minlength')) {
+      return "Tamanho de 6 caracteres minimos"
     }
 
     return ""
   }
 
   public isFormDisabled(): boolean {
-    return this.email.invalid || this.password.invalid
-
+    return this.loginForm.invalid
   }
 }
