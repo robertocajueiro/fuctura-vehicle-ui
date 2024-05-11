@@ -6,9 +6,10 @@ export const authenticatorGuard: CanActivateFn = (route, state) => {
 
   const router: Router = inject(Router);
 
-  const isAuthenticated = false;
+  const isAuthenticated = true;
 
   if (isAuthenticated) {
+    console.log('usuário está autenticado! ' + route)
     return true;
   }
 

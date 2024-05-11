@@ -24,7 +24,8 @@ import { AccessControlGuard } from './shared/guards/access-control.guard';
     MatButtonModule,
     MatToolbarModule
   ],
-  providers: [AccessControlGuard],
+  // providers: [AccessControlGuard],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

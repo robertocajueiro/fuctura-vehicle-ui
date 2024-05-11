@@ -6,32 +6,25 @@ import { CoreRoutingModule } from './core-routing.module';
 import { RegisterComponent } from './components/register/register.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import {MatCardModule} from '@angular/material/card';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
-import {MatIconModule} from '@angular/material/icon';
-
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
     LoginComponent,
     DashboardComponent,
     RegisterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     CommonModule,
-    FormsModule,
     CoreRoutingModule,
-    MatCardModule,
+    FormsModule,
     MatFormFieldModule,
-    MatButtonModule,
     MatInputModule,
-    MatIconModule
-  ]
+    ReactiveFormsModule,
+  ],
 })
-export class CoreModule { }
+export class CoreModule {}

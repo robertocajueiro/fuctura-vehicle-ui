@@ -8,11 +8,11 @@ const routes: Routes = [
   { path: '', component: VehicleListComponent, pathMatch: 'full',
     canActivate: [authenticatorGuard]
    },
-   { path: ':id', component: VehicleListComponent,
-    canActivate: [authenticatorGuard]
-    },
   { path: 'cadastrar', component: VehicleRegisterComponent,
     canActivate: [authenticatorGuard]
+   },
+   { path: ':id', component: VehicleListComponent,
+   canActivate: [authenticatorGuard]
    },
 ];
 
