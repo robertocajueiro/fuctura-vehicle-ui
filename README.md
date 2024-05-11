@@ -10,8 +10,18 @@ https://git-scm.com/downloads
 ```bash
 npm install -g @angular/cli@16.2.8
 ```
-## criando o projeto
+## Criando o projeto
 ``` bash
 ng new fuctura-veicular-ui --routing --style scss
 ng new fuctura-veicular-ui
 ```
+## Estrutura do projeto
+
+APP >
+        MODULE >
+                COMPONENTS
+        SHARED >
+                COMPONENTS
+                SERVICES
+                GUARDS
+                DIRECTIVES
