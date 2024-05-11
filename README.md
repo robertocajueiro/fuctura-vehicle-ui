@@ -27,7 +27,7 @@ APP >\
                 GUARDS\
                 DIRECTIVES
 ```
-
+## gerando modulos, componentes e rotas 
 ``` bash
 ng generate module core --routing
 
@@ -47,8 +47,10 @@ ng g c vehicle/components/vehicle-list
 ```
 
 ## Configuração Guards
-## link para consulta sweetalert2 
+
+link para consulta sweetalert2 
 https://sweetalert2.github.io/
+
 ```bash
 npm install sweetalert2
 
