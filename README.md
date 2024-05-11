@@ -17,11 +17,12 @@ ng new fuctura-veicular-ui
 ```
 ## Estrutura do projeto
 
-APP >\
-    <pre>    MODULE >\
-    <pre>            COMPONENTS
-    <pre>    SHARED >\
-    <pre>            COMPONENTS\
-    <pre>           SERVICES\
-    <pre>            GUARDS\
-    <pre>            DIRECTIVES
+/*APP >\
+        MODULE >\
+                COMPONENTS
+        SHARED >\
+                COMPONENTS\
+                SERVICES\
+                GUARDS\
+                DIRECTIVES
+*/
