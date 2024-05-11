@@ -27,3 +27,32 @@ APP >\
                 GUARDS\
                 DIRECTIVES
 ```
+
+``` bash
+ng generate module core --routing
+
+ng generate component core/components/login 
+
+ng generate component core/components/register
+
+ng generate component core/components/dashboard
+
+ng generate component core/components/page-not-found
+
+ng g m vehicle --routing
+
+ng g c vehicle/components/vehicle-list
+ng g c vehicle/components/vehicle-register
+ng g c vehicle/components/vehicle-list
+```
+
+## Configuração Guards
+## link para consulta sweetalert2 
+https://sweetalert2.github.io/
+```bash
+npm install sweetalert2
+
+ng g g shared/guards/authenticator
+
+ng g g shared/guards/access-control
+```
