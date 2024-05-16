@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "email": "user@xpto.com",
+      "password": "$2a$10$uINih6ejPX.LdCW/nXYzBOfeYayN7EDLXDhcqQrPQGVQxCKmYmozy",
+      "id": 1
+    }
+  ],
+  "vehicles": [],
+  "customer": []
+}
