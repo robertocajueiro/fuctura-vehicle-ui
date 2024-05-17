@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" *ngIf="isAuthenticated">
   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
     <mat-icon>menu</mat-icon>
   </button>
@@ -11,12 +11,15 @@
     <mat-icon>share</mat-icon>
   </button>
 </mat-toolbar>
-
-<a [routerLink]="['/veiculo']">Veiculo Lista</a><br>
-<a [routerLink]="['/dashboard']">Dashboard</a><br>
-<a [routerLink]="['/veiculo/cadastrar']">Cadastrar Veiculo</a><br>
+<div *ngIf="isAuthenticated">
+  <a [routerLink]="['/veiculo']">Veiculo Lista</a><br>
+  <a [routerLink]="['/dashboard']">Dashboard</a><br>
+  <a [routerLink]="['/veiculo/cadastrar']">Cadastrar Veiculo</a><br>
 <a [routerLink]="['veiculo', 'cadastrar']">Cadastrar Veiculo</a><br>
 <a [routerLink]="['/entrar']">Entrar</a>
+</div>
+
+
 
 <router-outlet></router-outlet>
 

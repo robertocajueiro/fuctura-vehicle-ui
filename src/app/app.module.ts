@@ -10,6 +10,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { VehicleListComponent } from './vehicle/components/vehicle-list/vehicle-list.component';
 import { AccessControlGuard } from './shared/guards/access-control.guard';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AccessControlGuard } from './shared/guards/access-control.guard';
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    HttpClientModule
   ],
   // providers: [AccessControlGuard],
   providers: [],

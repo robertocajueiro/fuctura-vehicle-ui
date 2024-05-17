@@ -6,21 +6,23 @@ import { ApplicationState } from '../models/application-state';
 })
 export class ApplicationService {
 
-  private applicationState: ApplicationState  = {
+  private applicationState: ApplicationState = {
     token: null
-  }
+  };
 
   constructor() { }
 
-  getToken(): string | null {
+  public getToken(): string | null {
     return this.applicationState.token
   }
-  public setToken(token: string) {
+
+  public setToken(token: string): void {
     localStorage.setItem("token", token)
     this.applicationState.token = token
   }
 
   public loadToken(): void {
-    this.applicationState.token= localStorage.getItem("tokken")
+    this.applicationState.token = localStorage.getItem("token")
   }
 }
+

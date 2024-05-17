@@ -1,17 +1,19 @@
 import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { AuthenticationService } from '../services/authentication.service';
 
 export const authenticatorGuard: CanActivateFn = (route, state) => {
 
   const router: Router = inject(Router);
 
-  const isAuthenticated = true;
+  const authenticationService: AuthenticationService = inject(AuthenticationService);
 
-  if (isAuthenticated) {
-    console.log('usuário está autenticado! ' + route)
+  if (authenticationService.getIsAuthenticated()) {
+    console.log('Usuário está autenticado na rota ' + route)
     return true;
   }
+
 
   Swal.fire('Sessão expirada', 'Favor realizar novo Login', 'error');
 
@@ -21,4 +23,5 @@ export const authenticatorGuard: CanActivateFn = (route, state) => {
 
   // segunda implementacao
   return router.createUrlTree(['/entrar']);
+
 };
